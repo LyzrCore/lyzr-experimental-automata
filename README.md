@@ -18,6 +18,7 @@ pip install lyzr-experimental-automata
 import os
 import nest_asyncio
 from lyzr_experimental_automata import Agent, Task, State
+
 nest_asyncio.apply()
 ```
 
@@ -54,10 +55,12 @@ Task 1 is the initial task in the workflow. You can control the visibility of it
 ### Example Task 1
 
 ```python
-task1 = Task(instructions="Do a detailed research and pull out interesting marketing tips for SaaS companies. The research articles should not be more than 1500 words.",
-desired_output="Ensure that you bring the best content from the likes of HBS and Saastr",
-agent=agent1,max_tokens=1500,
-display_output='yes')
+task1 = Task(instructions="Do a detailed research and pull out interesting marketing tips for SaaS companies. The research articles should not
+            be more than 1500 words.",
+            desired_output="Ensure that you bring the best content from the likes of HBS and Saastr",
+            agent=agent1,max_tokens=1500,
+            display_output='yes'
+            )
 ```
 
 Setting Up Dependencies
@@ -71,11 +74,11 @@ task2 = Task("enter the instructions", "enter the desired outcome", agent1, disp
 ### Example Task 2
 
 ```python
-task2 = Task(instructions="Use the research material provided and write five engaging tweets. Display only the tweets. No explanation or additional comments required.",
-desired_output="Ensure that the tweets are as engaging as if the best influencer in the world wrote it",
-agent=agent2, display_output="yes",
-dependencies=[task1],
-)
+task2 = Task(instructions="Use the research material provided and write five engaging tweets. Display only the tweets. No explanation or                     additional comments required.",
+            desired_output="Ensure that the tweets are as engaging as if the best influencer in the world wrote it",
+            agent=agent2, display_output="yes",
+            dependencies=[task1],
+            )
 ```
 
 Continue adding tasks as required, defining their dependencies to optimize parallel processing.
@@ -87,7 +90,12 @@ task3 = Task("enter the instructions", "enter the desired outcome", agent1, disp
 ### Example Task 3
 
 ```python
-task3 = Task("Use the research material provided and write 1 short form LinkedIn post. Display only the LinkedIn post. No explanation or additional comments required.", "Ensure that the post is as if it was written by the best influencer in the world", agent3, display_output='yes', dependencies=[task1])
+task3 = Task(instructions="Use the research material provided and write 1 short form LinkedIn post. Display only the LinkedIn post. No                      explanation or additional comments required.",
+            desired_output="Ensure that the post is as if it was written by the best influencer in the world",
+            agent=agent3,
+            display_output="yes",
+            dependencies=[task1],
+            )
 ```
 
 ## How is Lyzr Automata different from other agent frameworks like LangGraph, Autogen, ChatDev?
