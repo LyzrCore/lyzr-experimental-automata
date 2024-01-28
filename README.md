@@ -1,5 +1,6 @@
 
-![Lyzr Automata Logo](https://github.com/LyzrCore/lyzr-experimental-automata/assets/136654928/f16a9cc6-4648-45ef-91b6-f117183d5079)
+![Lyzr Automata](https://github.com/LyzrCore/lyzr-experimental-automata/assets/136654928/d618eed2-f797-451b-bdd5-3d816424346d)
+
 
 # lyzr-experimental-automata
 The version 0.2 is a prompt-based agent workflow capable of executing tasks parallelly and in a stateful manner. 
