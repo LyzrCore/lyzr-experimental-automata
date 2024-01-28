@@ -122,4 +122,6 @@ Lyzr Automata is in the experimental phase, and it is open-source. Welcoming con
 - Add your feature or improvement.
 - Send a pull request.
 
-- 
+## Contact
+
+For queries, reach us at contact@lyzr.ai
