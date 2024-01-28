@@ -98,6 +98,11 @@ task3 = Task(instructions="Use the research material provided and write 1 short 
             dependencies=[task1],
             )
 ```
+### Execute the Workflow
+
+```python
+output = State([task1, task2, task3])
+```
 
 ## How is Lyzr Automata different from other agent frameworks like LangGraph, Autogen, ChatDev?
 
