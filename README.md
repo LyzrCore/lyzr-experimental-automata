@@ -25,9 +25,11 @@ Note: Use nest_asyncio if you are running it on notebooks like Jupyter or Google
 
 Begin by configuring your agents and assigning them unique personas:
 
+```python
 agent1 = Agent(persona="enter the persona of agent1")
 agent2 = Agent(persona="enter the persona of agent2")
 agent3 = Agent(persona="enter the persona of agent3")
+```
 
 ### Example Configuration
 
