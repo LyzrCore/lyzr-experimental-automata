@@ -29,22 +29,22 @@ agent1 = Agent(persona="enter the persona of agent1")
 agent2 = Agent(persona="enter the persona of agent2")
 agent3 = Agent(persona="enter the persona of agent3")
 
-## Example Configuration:
+## Example Configuration
 
 agent1 = Agent(persona="Marketing Consultant")
 agent2 = Agent(persona="Tweet Generator")
 agent3 = Agent(persona="Linkedin Post Creator")
 
-**Creating Tasks
-**
+# Creating Tasks
+
 Create tasks by providing specific instructions and desired outcomes. Assign these tasks to your pre-defined agents:
 
 task1 = Task("enter the instructions", "enter the desired outcome", agent1, display_output='no')
 
 Task 1 is the initial task in the workflow. You can control the visibility of its output by setting display_output to either 'yes' or 'no'.
 
-**Example Task 1:
-**
+# Example Task 1
+
 task1 = Task(instructions="Do a detailed research and pull out interesting marketing tips for SaaS companies. The research articles should not be more than 1500 words.",
 desired_output="Ensure that you bring the best content from the likes of HBS and Saastr",
 agent=agent1,max_tokens=1500,
@@ -56,8 +56,8 @@ Leverage the multi-thread, parallel-processing capabilities of Lyzr Automata by 
 
 task2 = Task("enter the instructions", "enter the desired outcome", agent1, display_output='yes', dependencies=[task1])
 
-**Example Task 2:
-**
+# Example Task 2
+
 task2 = Task(instructions="Use the research material provided and write five engaging tweets. Display only the tweets. No explanation or additional comments required.",
 desired_output="Ensure that the tweets are as engaging as if the best influencer in the world wrote it",
 agent=agent2, display_output="yes",
@@ -68,14 +68,32 @@ Continue adding tasks as required, defining their dependencies to optimize paral
 
 task3 = Task("enter the instructions", "enter the desired outcome", agent1, display_output='yes', dependencies=[task1])
 
-**Example Task 3:
-**
+# Example Task 3
+
 task3 = Task("Use the research material provided and write 1 short form LinkedIn post. Display only the LinkedIn post. No explanation or additional comments required.", "Ensure that the post is as if it was written by the best influencer in the world", agent3, display_output='yes', dependencies=[task1])
 
-**How is Lyzr Automata different from other agent frameworks like LangGraph, Autogen, ChatDev?
-**
+## How is Lyzr Automata different from other agent frameworks like LangGraph, Autogen, ChatDev?
+
 Lyzr Automata follows a unique prompting structure (in the 'Prompt Agents') by combining Agent Persona and Task Instructions. While Agents and Tasks can exist independently, combining them allows the task to enter a steady state post-completion.
 
 Lyzr Automata also focuses on multi-threading from the word go without compromising the 'low-code' focus of Lyzr's framework.
 
+## Upcoming Features
 
+1. Advanced prompt restructuring powered by Lyzr's MagicPrompts (https://magicprompts.lyzr.ai/)
+2. More non-prompt agents to be added (this is where Lyzr's Multi-Agent Framework stands apart as we are taking a completely different approach towards process automation)
+3. An easy-to-use UI to create workflows and debug issues
+4. Even more simpler syntax to stitch together tasks to form a workflow
+5. Integrations with pre-built and SOTA architecture-powered Lyzr Agent SDKs - Chat Agents, RAG Agents, Search Agents, Data Agents, Generator Agents, Summarizer Agents
+6. AWS Native Agent Framework with agents running on AWS Lambda
+
+##Contribution
+
+Lyzr Automata is in the experimental phase, and it is open-source. Welcoming contributions.
+
+- Fork the repository.
+- Create a new branch for your feature.
+- Add your feature or improvement.
+- Send a pull request.
+
+- 
