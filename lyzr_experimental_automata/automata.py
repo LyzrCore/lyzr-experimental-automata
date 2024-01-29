@@ -84,7 +84,7 @@ async def _run_tasks(tasks):
 
     await asyncio.gather(*task_to_future.values())
 
-    return " ".join(outputs[task] for task in tasks)
+    return "<br>".join(f"<h1><strong>Task{index+1} Output</strong></h1><br>{outputs[task]}<br>" for index, task in enumerate(tasks) if task.display_output == True)
 
 
 def State(tasks):
