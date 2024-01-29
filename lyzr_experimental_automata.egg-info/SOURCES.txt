@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+lyzr_experimental_automata/__init__.py
+lyzr_experimental_automata/automata.py
+lyzr_experimental_automata.egg-info/PKG-INFO
+lyzr_experimental_automata.egg-info/SOURCES.txt
+lyzr_experimental_automata.egg-info/dependency_links.txt
+lyzr_experimental_automata.egg-info/requires.txt
+lyzr_experimental_automata.egg-info/top_level.txt
